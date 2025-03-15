@@ -2,14 +2,13 @@ import Card from "./Card";
 import { useRef } from "react";
 
 const ForGround = () => {
-
-const ref = useRef(null);
+  const ref = useRef(null);
 
   const data = [
     {
       text: " Lorem ipsum dolor,",
       filesize: "0.9mb",
-      close: false ,
+      close: false,
       tag: {
         isOpen: true,
         tagTitle: "Download Now",
@@ -19,9 +18,9 @@ const ref = useRef(null);
     {
       text: " Lorem ipsum dolor,",
       filesize: "0.9mb",
-      close: false ,
+      close: false,
       tag: {
-        isOpen: false ,
+        isOpen: false,
         tagTitle: "Download ",
         tagColor: "blue",
       },
@@ -29,7 +28,7 @@ const ref = useRef(null);
     {
       text: " Lorem ipsum dolor,",
       filesize: "0.9mb",
-      close: false ,
+      close: false,
       tag: {
         isOpen: true,
         tagTitle: "Upload",
@@ -39,10 +38,13 @@ const ref = useRef(null);
   ];
 
   return (
-    <div ref={ref} className=" fixed top-0 left-0 w-full h-screen z-[3] flex gap-10 flex-wrap p-5 ">
+    <div
+      ref={ref}
+      className=" fixed top-0 left-0 w-full h-screen z-[3] flex gap-10 flex-wrap p-5 "
+    >
       {data.map((item, index) => (
         <div key={index}>
-          <Card data={item} refrence={ref}/>
+          <Card data={item} refrence={ref} />
         </div>
       ))}
     </div>
